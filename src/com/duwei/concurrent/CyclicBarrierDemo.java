@@ -20,9 +20,12 @@ public class CyclicBarrierDemo {
         CyclicBarrier barrier = new CyclicBarrier(3);
 
         ExecutorService executor = Executors.newFixedThreadPool(3);
-        executor.submit(new Thread(new Runner(barrier, "1号选手")));
-        executor.submit(new Thread(new Runner(barrier, "2号选手")));
-        executor.submit(new Thread(new Runner(barrier, "3号选手")));
+        Thread runner1 = new Thread(new Runner(barrier, "1号选手"));
+        Thread runner2 = new Thread(new Runner(barrier, "2号选手"));
+        Thread runner3 = new Thread(new Runner(barrier, "3号选手"));
+        executor.submit(runner1);
+        executor.submit(runner2);
+        executor.submit(runner3);
 
         executor.shutdown();
     }
