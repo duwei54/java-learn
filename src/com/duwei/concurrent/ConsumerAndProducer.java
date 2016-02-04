@@ -5,7 +5,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 多生产者多消费者(concurrent实现) 演示
+ * 多生产者多消费者(concurrent lock 实现) 演示
  */
 public class ConsumerAndProducer {
 
@@ -29,6 +29,7 @@ public class ConsumerAndProducer {
         producer.start();
         producer1.start();
 //        producer2.start();
+//        producer3.start();
 //        producer3.start();
 
         try {

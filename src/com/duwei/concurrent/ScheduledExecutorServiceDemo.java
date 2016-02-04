@@ -4,13 +4,16 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class DelayDemo {
+/**
+ *定时执行任务演示
+ */
+public class ScheduledExecutorServiceDemo {
  
     private int count; 
  
     private ScheduledExecutorService executorService;
  
-    public DelayDemo() {
+    public ScheduledExecutorServiceDemo() {
 
         this.executorService = Executors.newScheduledThreadPool(5);
         this.executorService.scheduleWithFixedDelay(new Runnable() { 
@@ -30,6 +33,6 @@ public class DelayDemo {
     } 
  
     public static void main(String[] args) { 
-        new DelayDemo(); 
+        new ScheduledExecutorServiceDemo();
     } 
 }
