@@ -2,8 +2,7 @@ package com.duwei.other;
 
 /**
  * 〈控制台输出乘法口诀〉<br>
- *
- * @author duwei
+ * @author duwei 2016-02-05
  */
 public class MultiplicationTable {
 	public static void main(String[] args) {
