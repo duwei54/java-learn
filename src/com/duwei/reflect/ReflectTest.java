@@ -40,9 +40,9 @@ public class ReflectTest {
 
 class UserBean {
 
-    public String userid;
-    public String username;
-    public String password;
+    private String userid;
+    private String username;
+    private String password;
 
     public String getUserid() {
         return userid;

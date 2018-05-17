@@ -29,12 +29,7 @@ public class FutureCallableDemo {
 
 
         System.out.println("提交任务:获取的斐波那契数!");
-        Future<Long> future = executorService.submit(new Callable<Long>() {
-            @Override
-            public Long call() throws Exception {
-                return fibonacci(45);
-            }
-        });
+        Future<Long> future = executorService.submit(() -> fibonacci(45));
 
         try {
             System.out.println("执行其他任务!");

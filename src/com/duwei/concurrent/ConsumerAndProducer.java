@@ -6,6 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 多生产者多消费者(concurrent lock 实现) 演示
+ * @author duwei
  */
 public class ConsumerAndProducer {
 

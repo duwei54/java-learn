@@ -15,7 +15,8 @@ public class ForkJoinTaskDemo extends RecursiveTask<Long>{
 
     @Override
     protected Long compute() {
-        if (n <= 10) {//小于10不做分解,直接运算
+        //小于10不做分解,直接运算
+        if (n <= 10) {
             return fibonacci(n);
         }
         ForkJoinTaskDemo fork1 = new ForkJoinTaskDemo(n-1);

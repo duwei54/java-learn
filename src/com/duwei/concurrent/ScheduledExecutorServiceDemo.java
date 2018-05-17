@@ -15,7 +15,7 @@ public class ScheduledExecutorServiceDemo {
 
     public static void main(String[] args) {
         ScheduledExecutorService executorService = Executors.newScheduledThreadPool(5);
-        executorService.scheduleWithFixedDelay((Runnable) () -> {
+        executorService.scheduleWithFixedDelay(() -> {
             int index = ++count;
             flag = !flag;
             if (flag) {

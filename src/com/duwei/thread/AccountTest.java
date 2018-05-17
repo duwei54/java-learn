@@ -8,20 +8,16 @@ public class AccountTest {
 
 		final BankAccount ac = new BankAccount("张三", 2000);
 		for (int i = 0; i < THREADNUM; i++) {
-			threads[i] = new Thread(new Runnable() {
+			threads[i] = new Thread(() -> {
 
-				@Override
-				public void run() {
-
-					synchronized (ac) {
-						ac.putin(100);
-						try {
-							Thread.sleep(100);
-						} catch (InterruptedException e) {
-							e.printStackTrace();
-						}
-						ac.getout(100);
+				synchronized (ac) {
+					ac.putin(100);
+					try {
+						Thread.sleep(100);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
 					}
+					ac.getout(100);
 				}
 			});
 			threads[i].start();

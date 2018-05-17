@@ -14,11 +14,14 @@ import java.util.concurrent.Semaphore;
  */
 public class SemaphoreDemo {
 
-    private static final int CAR_NUM = 30;//待停车数量
-    private static final int PARKING_SLOF = 10;//车位的数量
+    //待停车数量
+    private static final int CAR_NUM = 30;
+    //车位的数量
+    private static final int PARKING_SLOF = 10;
 
     public static void main(String[] args) {
-        Semaphore semaphore = new Semaphore(PARKING_SLOF, true);//设置公平 FIFO
+        //设置公平 FIFO
+        Semaphore semaphore = new Semaphore(PARKING_SLOF, true);
         ExecutorService service = Executors.newCachedThreadPool();
 
         for (int carNo = 1; carNo <= CAR_NUM; carNo++) {
