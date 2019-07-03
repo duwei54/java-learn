@@ -5,7 +5,8 @@ import java.util.stream.Collectors;
 
 /**
  * 流 测试
- * Created by duwei on 2017/5/20.
+ *
+ * @author duwei on 2017/5/20.
  */
 public class StreamTest {
     public static void main(String args[]) {
